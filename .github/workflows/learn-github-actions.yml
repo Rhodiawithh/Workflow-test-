@@ -5,9 +5,17 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v7
-        with:
-          node-version: '24'
-      - run: npm install -g bats
-      - run: bats -v
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Compile C program
+        run: gcc -o my_program main.c
+
+      - name: Run tests
+        run: |
+          if ./my_program; then
+            echo "Test Passed"
+          else
+            echo "Test Failed"
+            exit 1
+          fi
