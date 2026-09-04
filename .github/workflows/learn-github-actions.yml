@@ -16,9 +16,16 @@ jobs:
 
       - name: Compile C program
         run: gcc -o my_program main.c
+
+      - name : Put the program in the PATH
+        uses : actions/upload-artifact@v3
+        with : 
+            name : my_program
+            path : my_program
         
 
   test :
+    needs : build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
