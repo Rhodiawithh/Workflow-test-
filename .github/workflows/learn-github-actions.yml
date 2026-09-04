@@ -36,6 +36,10 @@ jobs:
         with:
          name: my_program
          
+
+      - name: Give execution permission
+        run: chmod +x my_program
+        
       - name: Run tests
         run: |
           if ./my_program; then
