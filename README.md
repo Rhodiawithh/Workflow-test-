@@ -1,4 +1,6 @@
 # Workflow-test-
+Repository used for the workflow test & implementation (before separating the task) : https://github.com/BaseMax/github-actions-compile-c
+
 The GitHub Action is configured to automatically compile the C program every time a change is pushed to the main branch or a pull request is created.
 
 Create a new file in the .github/workflows directory:
