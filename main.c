@@ -6,7 +6,7 @@ int factorial(int n) {
 }
 
 int main() {
-    printf("Hello, GitHub Actions!\n");
+    printf("Hello, GitHub Actions!\n")
 
     int num = 5;
     printf("Factorial of %d is %d\n", num, factorial(num));
